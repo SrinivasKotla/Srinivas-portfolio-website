@@ -35,7 +35,7 @@ const Resume = () => {
     title: "Feb 2021 - Present",
     cardTitle: "Amazon Web Services",
     cardSubtitle: "Software Development Intern, Full Time",
-    cardDetailedText: [<span>Worked on developing a <b>Policy evaluation widget</b> components using React, Angular frameworks and explored AWS API gate way and custom Amazon build and deployment frameworks.</span>,
+    cardDetailedText: [<span key={1}>Worked on developing a <b>Policy evaluation widget</b> components using React, Angular frameworks and explored AWS API gate way and custom Amazon build and deployment frameworks.</span>,
       "Designed the workflow, architecture and helped in developing UX of the widget. Explored various methods to mitigate security issues and implemented the best possible solution."],
   }, {
     title: "Jun 2017 - July 2019",
@@ -118,7 +118,7 @@ const Resume = () => {
                 <h1 className="text-2xl font-bold">Education</h1>
                 {
                   resume.education.map(({ universityName, universityDate, universityPara }) => {
-                    return <div className="mt-2">
+                    return <div key={universityName} className="mt-2">
                       <h2 className="text-lg">{universityName}</h2>
                       <h3 className="text-sm opacity-75">
                         {universityDate}
